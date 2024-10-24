@@ -1,6 +1,6 @@
 package fr.fms.entities;
 
-import java.sql.Date;
+import java.util.Date;
 
 /**
  * The Order class represents an order placed by a customer.
@@ -44,7 +44,6 @@ public class Order {
     }
 
 	public Order(double amount, Date date, int idCustomer) {
-		super();
 		this.amount = amount;
 		this.date = date;
 		this.idCustomer = idCustomer;

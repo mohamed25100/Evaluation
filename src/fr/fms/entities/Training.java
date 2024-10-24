@@ -8,6 +8,8 @@ public class Training {
 	private String format; // presentiel ou distanciel
 	private double price;
 	private int idCategory; // Clé étrangère vers la catégorie
+	private int quantity = 1;
+	
 	public Training(int idTraining, String name, String description, int durationDays, String format, double price, int idCategory) {
 		this.idTraining = idTraining;
 		this.name = name;
@@ -27,6 +29,18 @@ public class Training {
 		this.durationDays = durationDays;
 		this.format = format;
 		this.price = price;
+	}
+
+
+
+	public int getQuantity() {
+		return quantity;
+	}
+
+
+
+	public void setQuantity(int quantity) {
+		this.quantity = quantity;
 	}
 
 

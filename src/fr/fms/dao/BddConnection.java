@@ -56,7 +56,7 @@ public class BddConnection {
 		Properties props = new Properties();		
 		try (FileInputStream fis = new FileInputStream("files/config.properties")){
 			props.load(fis);
-			System.out.println("coucou");
+			//System.out.println("coucou");
 		} catch (FileNotFoundException e1) {
 			logger.severe("Fichier de config non trouvé " + e1.getMessage());
 		} catch (IOException e1) {
