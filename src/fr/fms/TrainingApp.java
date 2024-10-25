@@ -26,7 +26,7 @@ public class TrainingApp {
 	private static String login = null; 
 	
 	public static void main(String[] args) {
-		System.out.println("Bonjour et bienvenu dans ma boutique, voici la liste d'articles en stock\n");
+		System.out.println("Bonjour et bienvenu dans ma boutique, voici la liste des formations en stock\n");
 		
 		displayTrainings();
 		int choice = 0;
@@ -144,9 +144,9 @@ public class TrainingApp {
 		else {
 			System.out.println("CONTENU DU PANIER :");
 			System.out.printf("-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------%n");
-			System.out.printf("%-15s | %-50s | %-70s | %-15s | %-20s | %-10s% | %-10s%n",COLUMN_ID,COLUMN_NAME,COLUMN_DESCRIPTION,COLUMN_DURATIONDAYS,COLUMN_FORMAT,COLUMN_DURATIONPRICE,COLUMN_QUANTITE);
+			System.out.printf("%-15s | %-50s | %-70s | %-15s | %-20s | %-10s | %-10s%n", COLUMN_ID, COLUMN_NAME, COLUMN_DESCRIPTION, COLUMN_DURATIONDAYS, COLUMN_FORMAT, COLUMN_DURATIONPRICE, COLUMN_QUANTITE);
 			System.out.printf("-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------%n");
-			business.getCart().forEach(t -> System.out.printf("%-15s | %-50s | %-70s | %-15s | %-20s | %-10s | %-10s%%n",t.getIdTraining(),t.getName(),t.getDescription(),t.getDurationDays(),t.getFormat(),t.getPrice(),t.getQuantity()));
+			business.getCart().forEach(t -> System.out.printf("%-15s | %-50s | %-70s | %-15s | %-20s | %-10s | %-10s%n",t.getIdTraining(),t.getName(),t.getDescription(),t.getDurationDays(),t.getFormat(),t.getPrice(),t.getQuantity()));
 			if(flag) {
 				System.out.println("MONTANT TOTAL : " + business.getTotal());
 				System.out.println("Souhaitez vous passer commande ? Oui/Non :");
@@ -292,7 +292,7 @@ public class TrainingApp {
 	}
 
 	public static void addTraining() {
-		System.out.println("Selectionner l'id de l'article à ajouter au panier");
+		System.out.println("Selectionner l'id de la formation à ajouter au panier");
 		int id = scanInt();
 		Training training = business.readOneTraining(id);
 		if(training != null) {
